@@ -1,0 +1,17 @@
+<h1>
+    Heroes
+    <small>
+    Marvel y DC
+  </small>
+</h1>
+
+<hr>
+<!-- *ngFor="let heroe of heroes;let i = index" -->
+
+<div class="card-columns">
+    <!-- con el [heroe]="hero" se pasa cada objeto hero 
+        al atrbito heroe del componente heroe-tarjeta  -->
+    <app-heroe-tarjeta [heroe]="hero" [codigoHeroe]="i" *ngFor="let hero of heroes;let i = index">
+
+    </app-heroe-tarjeta>
+</div>
