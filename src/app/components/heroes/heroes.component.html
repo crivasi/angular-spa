@@ -11,7 +11,13 @@
 <div class="card-columns">
     <!-- con el [heroe]="hero" se pasa cada objeto hero 
         al atrbito heroe del componente heroe-tarjeta  -->
-    <app-heroe-tarjeta [heroe]="hero" [codigoHeroe]="i" *ngFor="let hero of heroes;let i = index">
+    <app-heroe-tarjeta
+        [heroe]="hero" 
+        [codigoHeroe]="i" 
+        *ngFor="let hero of heroes;let i = index"
+    >
+    <!-- (heroeSeleccionado)="verHeroe( $event )" esto se 
+        pondría para usar el output heroeSeleccionado de heroe-tarjeta component -->
 
     </app-heroe-tarjeta>
 </div>

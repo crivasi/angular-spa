@@ -21,6 +21,7 @@ export class BuscadorComponent implements OnInit {
     this._activatedRoute.params.subscribe(params => {
       console.log(params['valorbusqueda']); // el id es por cómo se puso el parámetro en el route
       this.heroes = this._heroesService.buscarHeroes(params['valorbusqueda']);
+      console.log(this.heroes);
       this.parametroBusqueda = params['valorbusqueda'];
     });
     

@@ -72,8 +72,11 @@ export class HeroesService {
     buscarHeroes(valorABuscar:string):Heroe[]{
         valorABuscar = valorABuscar.toLowerCase();
         let heroesEncontrados:Heroe[] = [];
-        for(let heroe of this.heroes){
+        // for(let heroe of this.heroes){
+        for(let i = 0; i < this.heroes.length; i++){
+            let heroe = this.heroes[i];
             if(heroe.nombre.toLowerCase().indexOf(valorABuscar) >= 0){
+                heroe.codigo = i; 
                 heroesEncontrados.push(heroe);
             }
         }
@@ -87,5 +90,6 @@ export interface Heroe{
     bio:string,
     img:string,
     aparicion:string,
-    casa:string
+    casa:string,
+    codigo?:number
 }
